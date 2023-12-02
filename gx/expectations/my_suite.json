@@ -1,0 +1,66 @@
+{
+  "data_asset_type": null,
+  "expectation_suite_name": "my_suite",
+  "expectations": [
+    {
+      "expectation_type": "expect_table_columns_to_match_ordered_list",
+      "kwargs": {
+        "column_list": [
+          "account_id",
+          "user_id",
+          "transaction_id",
+          "transaction_type",
+          "transaction_amt_usd"
+        ]
+      },
+      "meta": {
+        "notes": {
+          "content": "Some clever comment about this expectation. **Markdown** `Supported`",
+          "format": "markdown"
+        }
+      }
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_set",
+      "kwargs": {
+        "column": "transaction_type",
+        "value_set": [
+          "purchase",
+          "refund",
+          "upgrade"
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "account_id",
+        "mostly": 1.0
+      },
+      "meta": {
+        "notes": {
+          "content": "Some clever comment about this expectation. **Markdown** `Supported`",
+          "format": "markdown"
+        }
+      }
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "user_id",
+        "mostly": 0.75
+      },
+      "meta": {
+        "notes": {
+          "content": "Some clever comment about this expectation. **Markdown** `Supported`",
+          "format": "markdown"
+        }
+      }
+    }
+  ],
+  "ge_cloud_id": null,
+  "meta": {
+    "great_expectations_version": "0.18.3"
+  }
+}
